@@ -49,7 +49,7 @@ export default defineComponent({
                     {{row[col.name]}}
                 </div>
                 <div v-if="col.type === columnType.Link">                
-                    <a href="`${row[col.name]}`">{{row[col.name]}}</a>
+                    <a v-bind:href="row[col.name]">{{row[col.name]}}</a>
                 </div>
             </td>
         </tr>
